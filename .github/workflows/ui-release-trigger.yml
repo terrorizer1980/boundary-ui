@@ -3,7 +3,8 @@ name: "Trigger Boundary UI release"
 on:
   push:
     tags:
-      - '*'
+      # Push events  v#.#.#*, ex: v0.1.2, v1.0.0-alpha
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
 
 jobs:
   trigger-circleci-release:
