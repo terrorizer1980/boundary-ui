@@ -1,0 +1,37 @@
+auth:
+  titles:
+    no-scopes: 利用可能なスコープはありません
+  descriptions:
+    no-scopes: スコープが見つかりませんでした。認証するには、管理者にスコープを作成してアクセスを許可するように依頼します。
+    choose-org: 認証するスコープを選択します。
+    authenticating-with-org: "{name}で認証しています。"
+origin:
+  connected-to: に接続されています
+titles:
+  home: ホームホーム
+  iam: IAM
+  new: 新着
+  resources: リソース
+  details: 詳細
+  general: 一般
+  overview: 概要概要
+  settings: 設定
+  empty-set: まだアイテムはありません
+  global: グローバル
+  actions: 行動
+  documentation: ドキュメンテーション
+  abandon-confirm: 保存されていない変更を破棄しますか？
+  toggle-color-theme: トグルカラーテーマ
+  welcome-to-boundary: 境界へようこそ
+descriptions:
+  empty-set: 表示するアイテムはまだありません。アイテムを追加したり、後で再試行したりできる場合があります。
+  origin-initialization: 開始するには、元のURLを入力してください
+questions:
+  delete-confirm: このリソースを削除してもよろしいですか？
+  remove-confirm: この関連付けを削除してもよろしいですか？
+  abandon-confirm: ナビゲートしてもよろしいですか？保存されていない変更は失われます。
+  retry-confirm: 再試行しますか？
+themes:
+  system: システムのデフォルト
+  light: 光
+  dark: 闇

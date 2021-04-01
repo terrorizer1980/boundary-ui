@@ -1,0 +1,239 @@
+account:
+  title: アカウント
+  title_plural: アカウント
+  description: アカウントを使用すると、ユーザーは特定の認証方法で境界にログインできます。ユーザーは、異なる認証方法に対して複数のアカウントを持っている場合があります。
+  messages:
+    welcome:
+      title: アカウントへようこそ
+      description: authメソッドのアカウントを作成および管理します。
+    set-password:
+      description: アカウントのパスワードを設定します。
+  types:
+    password: パスワード
+  actions:
+    create: アカウントを作成する
+    delete: アカウントを削除する
+auth-method:
+  title: 認証方法
+  title_plural: 認証方法
+  description: 認証メソッドを使用すると、ユーザーはスコープ内で認証できます。
+  messages:
+    welcome:
+      title: 認証メソッドへようこそ
+      description: 認証方法は、ユーザーを認証するための構成です。
+    none:
+      title: 認証方法なし
+      description: このスコープの認証メソッドが見つかりませんでした。
+    no-primary-auth-method:
+      title: "推奨事項：プライマリ認証方法を選択してください"
+      description: プライマリ認証メソッドは、ユーザーが初めて認証するときにユーザーを自動作成します。プライマリ認証メソッドのないスコープでは、認証が失敗する可能性があります。
+  types:
+    password: パスワード
+  actions:
+    create: 認証メソッドを作成する
+    delete: 認証方法を削除する
+    make-primary: プライマリにする
+    remove-as-primary: プライマリとして削除
+  notifications:
+    make-primary-success: Authメソッドがプライマリに正常に選択されました。
+    remove-as-primary-success: Authメソッドがプライマリとして正常に削除されました。
+  questions:
+    make-primary: プライマリ認証メソッドを作成しますか？
+    remove-as-primary: プライマリ認証メソッドを削除しますか？
+    make-primary-confirm: "プライマリ認証メソッドは、必要に応じて、最初の認証試行時にユーザーを自動作成します。注：プライマリ認証方法を変更すると、以前のプライマリはユーザーを自動作成しなくなります。"
+    remove-as-primary-confirm: プライマリ認証メソッドを削除すると、このスコープの認証が失敗する可能性があります。
+group:
+  title: グループ
+  title_plural: グループ
+  description: グループはユーザーの集まりです。グループを役割に割り当てて、役割の助成金を受け取ることができます。
+  messages:
+    welcome:
+      title: グループへようこそ
+    members:
+      title: メンバー
+      description: メンバーは、グループに割り当てられたユーザーです。
+    add-members:
+      title: メンバーを追加
+      description: このグループにユーザーを追加するには、ユーザーを選択します。
+    no-members:
+      title: 利用可能なメンバーはありません
+      description: このグループに追加できるメンバーはありません。
+  actions:
+    add-members: メンバーを追加
+    delete: グループを削除
+host-catalog:
+  title: ホストカタログ
+  title_plural: ホストカタログ
+  description: ホストカタログは、ホストとホストセットのコレクションです。
+  messages:
+    welcome:
+      title: ホストカタログへようこそ
+  actions:
+    delete: ホストカタログを削除する
+  types:
+    static: 静的
+host-set:
+  title: ホストセット
+  title_plural: ホストセット
+  description: ホストセットは、ホストカタログ内のホストのコレクションです。
+  actions:
+    add: ホストセットの追加
+    create: 新しいホストセット
+    delete: ホストセットを削除する
+    create-and-add-host: ホストの作成と追加
+    add-hosts: 既存のホストを追加
+  messages:
+    welcome:
+      title: ホストセットへようこそ
+  host:
+    messages:
+      none:
+        title: ホストなし
+        description: このホストセットで使用できるホストはありません。
+      add:
+        title: ホストを追加する
+        description: このホストセットに属するホストを選択します。
+      add-none:
+        title: 利用可能なホストがありません
+        description: 選択できるホストがありません。
+  types:
+    static: 静的
+host:
+  title: ホスト
+  title_plural: ホスト
+  description: ホストは、境界ターゲットによってアクセスされる可能性のあるリソースです。
+  messages:
+    welcome:
+      title: ホストへようこそ
+    none:
+      title: ホストなし
+      description: このスコープで使用できるホストはありません。
+    none-friendly:
+      title: 利用可能なホストがありません
+      description: 表示できるホストはまだありません。
+  actions:
+    add: ホストを追加
+    create: 新しいホスト
+    delete: ホストを削除する
+  types:
+    static: 静的
+session:
+  title: セッション
+  title_plural: セッション
+  active_plural: アクティブセッション
+  description: セッションは、境界を介して開始されたターゲットへの接続です。
+  messages:
+    none:
+      title: セッションなし
+      description: 現在のスコープ内にアクティブなセッションはありません。
+    none-friendly:
+      title: 利用可能なセッションはありません
+      description: 表示できるセッションはまだありません。
+    none-active-friendly:
+      title: 利用可能なアクティブなセッションはありません
+      description: 表示できるアクティブなセッションはまだありません。
+  actions:
+    connect: 接続する
+org:
+  title: 組織
+  title_plural: 組織
+  description: 組織は、プロジェクトとIAMリソースを整理するために使用されるスコープの一種です。組織は、グローバルスコープの子スコープです。
+  messages:
+    welcome:
+      title: 組織へようこそ
+    settings:
+      title: 組織設定
+  actions:
+    delete: 組織を削除
+project:
+  title: 事業
+  title_plural: プロジェクト
+  description: プロジェクトは、ターゲットやホストカタログなどのリソースを整理するために使用されるスコープの一種です。
+  messages:
+    welcome:
+      title: プロジェクトへようこそ
+    settings:
+      title: プロジェクト設定
+  actions:
+    delete: プロジェクトを削除する
+user:
+  title: ユーザー
+  title_plural: ユーザー
+  description: ユーザーは、境界へのアクセスを許可されたエンティティです。ユーザーはプリンシパルとしてロールに割り当てられ、ロールの付与を受けることができます。
+  messages:
+    welcome:
+      title: ユーザーへようこそ
+    accounts:
+      title: アカウント
+      description: ユーザーは、任意の数のアカウントに関連付けることができます。
+    add-accounts:
+      title: アカウントを追加する
+      description: このユーザーに関連付けるアカウントを選択します。
+    no-accounts:
+      title: 利用可能なアカウントがありません
+      description: このユーザーに追加できるアカウントはありません。
+  actions:
+    add-accounts: アカウントを追加する
+    delete: ユーザーの削除
+role:
+  title: 役割
+  title_plural: 役割
+  description: ロールは、機能付与とそれに割り当てられたプリンシパル（ユーザーおよびグループ）のコレクションです。
+  messages:
+    welcome:
+      title: 役割へようこそ
+  actions:
+    create: 役割の作成
+    delete: 役割の削除
+  principal:
+    title: 主要な
+    title_plural: 校長
+    description: プリンシパルは、役割に割り当てられ、役割の付与によって制限されるユーザーとグループです。
+    messages:
+      welcome:
+        title: 校長へようこそ
+        description: プリンシパルはこの役割に割り当てられていません。
+      none:
+        title: 利用可能なプリンシパルがありません
+        description: プリンシパルは割り当てに使用できません。
+      add-principals:
+        title: プリンシパルを追加する
+        description: この役割に割り当てるユーザーとグループを選択します。
+    types:
+      user: ユーザー
+      group: グループ
+    actions:
+      add-principals: プリンシパルを追加する
+  grant:
+    title: 付与
+    title_plural: 助成金
+    description: 付与は、役割がアクションを実行してリソースにアクセスできるようにする権限です。
+    actions:
+      create: 新しい助成金
+target:
+  title: 目標
+  title_plural: ターゲット
+  description: ターゲットは、セッションを開始するために使用できるホストセットの論理的なコレクションです。
+  messages:
+    welcome:
+      title: ターゲットへようこそ
+    none:
+      title: 利用可能なターゲットはありません
+      description: 表示するターゲットはまだありません。アクセスする予定のターゲットが表示されない場合は、境界管理者に連絡してください。
+  actions:
+    create: 新しいターゲット
+    delete: ターゲットを削除
+    add-host-sets: ホストセットの追加
+  types:
+    tcp: TCP
+  host-set:
+    messages:
+      welcome:
+        title: ホストセットへようこそ
+        description: このターゲットにはホストが設定されていません。
+      none:
+        title: 利用可能なホストセットがありません
+        description: ターゲットに追加できるホストセットがありません。
+      add:
+        title: ホストセットの追加
+        description: このターゲットに割り当てるホストセットを選択します。

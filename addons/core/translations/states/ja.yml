@@ -1,0 +1,10 @@
+active: アクティブ
+info: 情報
+success: 成功
+warning: 警告
+error: エラー
+copied: コピー
+connection:
+  success:
+    description: "ローカルプロキシアドレス（{protocol}）：{address}：{port}"
+primary: プライマリ

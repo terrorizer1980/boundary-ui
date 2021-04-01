@@ -1,0 +1,53 @@
+id:
+  label: ID
+name:
+  label: 名前
+  help: 識別のための名前
+description:
+  label: 説明
+  help: 識別のための説明
+type:
+  label: タイプ
+  help: スキーマの区別に役立つリソースのタイプ
+login_name:
+  label: ログイン名
+username:
+  label: ユーザー名
+set_password:
+  label: パスワード
+  help: 新しいパスワードを作成する
+password:
+  label: パスワード
+grant:
+  label: 付与
+  help: ロールの権限付与文字列
+address:
+  label: 住所
+  help: IP、ホスト名、またはその他のルーティング可能なアドレス
+default_port:
+  label: デフォルトのポート
+  help: 接続するデフォルトのポート
+current_password:
+  label: 現在のパスワード
+new_password:
+  label: 新しいパスワード
+started:
+  label: 開始
+status:
+  label: 状態
+session_max_seconds:
+  label: 最大期間（秒単位）
+  help: セッションの最大期間。
+session_connection_limit:
+  label: 最大接続数
+  help: セッションごとに許可される接続の最大数。無制限の場合は、「-1」を指定します。
+host_set:
+  label: ホストセット
+grant_scope:
+  label: 付与範囲
+  help: この役割が適用されるスコープを指定します。
+origin:
+  label: 発信元URL
+  description: 接続先の境界URL（例：protocol：// host：port）
+proxy:
+  label: プロキシ
