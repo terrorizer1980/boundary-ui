@@ -13,6 +13,7 @@ export default class ApplicationRoute extends Route {
 
   @service session;
   @service confirm;
+  @service intl;
 
   // =attributes
 
@@ -110,5 +111,10 @@ export default class ApplicationRoute extends Route {
         rootEl.classList.remove('rose-theme-dark');
         rootEl.classList.remove('rose-theme-light');
     }
+  }
+
+  @action
+  setLocale(locale) {
+    this.intl.setLocale([locale]);
   }
 }

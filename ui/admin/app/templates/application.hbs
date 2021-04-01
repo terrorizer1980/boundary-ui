@@ -31,6 +31,25 @@
 
             <dropdown.separator />
 
+            <dropdown.section @title={{t "titles.locale"}}>
+              <Rose::Form as |form|>
+                <form.radioGroup
+                  @name="theme"
+                  @selectedValue={{this.primaryLocale}}
+                  @changed={{route-action "setLocale"}}
+                as |radioGroup|>
+                  <dropdown.item>
+                    <radioGroup.radio @label={{t "locales.en-us"}} @value="en-us" />
+                  </dropdown.item>
+                  <dropdown.item>
+                    <radioGroup.radio @label={{t "locales.ja"}} @value="ja" />
+                  </dropdown.item>
+                </form.radioGroup>
+              </Rose::Form>
+            </dropdown.section>
+
+            <dropdown.separator />
+
             <dropdown.section @title={{t "titles.toggle-color-theme"}}>
               <Rose::Form as |form|>
                 <form.radioGroup

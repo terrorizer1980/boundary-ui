@@ -23,6 +23,7 @@ titles:
   abandon-confirm: 保存されていない変更を破棄しますか？
   toggle-color-theme: トグルカラーテーマ
   welcome-to-boundary: 境界へようこそ
+  locale: ロケール
 descriptions:
   empty-set: 表示するアイテムはまだありません。アイテムを追加したり、後で再試行したりできる場合があります。
   origin-initialization: 開始するには、元のURLを入力してください

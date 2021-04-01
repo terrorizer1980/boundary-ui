@@ -6,8 +6,16 @@ export default class ApplicationController extends Controller {
   // =services
 
   @service session;
+  @service intl;
 
   // =attributes
 
   notifyTimeout = config.notifyTimeout;
+
+  get primaryLocale() {
+    return this.intl.primaryLocale;
+  }
+  set primaryLocale(value) {
+    // no op
+  }
 }
