@@ -7,9 +7,9 @@ const {
 const {
   session,
   app,
+  dialog,
   protocol,
   BrowserWindow,
-  ipcMain,
   Menu,
   MenuItem,
 } = require('electron');
@@ -21,6 +21,7 @@ const { generateCSPHeader } = require('./content-security-policy.js');
 const menu = require('./menu.js');
 const appUpdater = require('./app-updater.js');
 const isDev = require('electron-is-dev');
+const spawnSession = require('./spawn-session.js');
 
 // Register the custom file protocol
 const emberAppProtocol = 'serve';
@@ -42,8 +43,27 @@ protocol.registerSchemesAsPrivileged([
 let mainWindow = null;
 
 app.on('window-all-closed', () => {
+  console.log('window-all-closed');
   if (process.platform !== 'darwin') {
     app.quit();
+  }
+});
+
+/**
+ * Prompt for closing spawned processes
+ */
+app.on('before-quit', () => {
+  if (spawnSession.hasEntries()) {
+    const dialogOpts = {
+      type: 'info',
+      buttons: ['Close', 'Ignore'],
+      icon: null,
+      detail: 'Close all active sessions?',
+    };
+
+    dialog.showMessageBox(dialogOpts).then((returnValue) => {
+      if (returnValue.response === 0) spawnSession.closeAll();
+    });
   }
 });
 

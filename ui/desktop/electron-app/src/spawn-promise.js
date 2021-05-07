@@ -1,6 +1,6 @@
 const path = require('path');
 const { spawn, spawnSync } = require('child_process');
-const spawnSession = require('./spawn-session');
+const spawnSession = require('./spawn-session.js');
 
 const boundaryPath = path.resolve(__dirname, '..', 'cli', 'boundary');
 
