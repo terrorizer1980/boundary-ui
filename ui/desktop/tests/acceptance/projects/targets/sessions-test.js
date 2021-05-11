@@ -247,6 +247,7 @@ module('Acceptance | projects | targets | sessions', function (hooks) {
 
   test('cancelling a session', async function (assert) {
     assert.expect(2);
+    stubs.ipcService.withArgs('cancel');
     const sessionsCount = this.server.schema.sessions.all().models.length;
     later(async () => {
       run.cancelTimers();
