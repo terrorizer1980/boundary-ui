@@ -50,19 +50,25 @@ app.on('window-all-closed', () => {
 });
 
 /**
- * Prompt for closing spawned processes
+ * Prompt for closing spawned processes before quitting app
  */
-app.on('before-quit', () => {
+app.on('before-quit', (event) => {
   if (spawnSession.hasEntries()) {
     const dialogOpts = {
-      type: 'info',
-      buttons: ['Close', 'Ignore'],
-      icon: null,
-      detail: 'Close all active sessions?',
+      type: 'question',
+      buttons: ['Close Sessions & Quit', 'Ignore & Quit', 'Cancel'],
+      detail: 'Close all active sessions before quitting?',
     };
 
     dialog.showMessageBox(dialogOpts).then((returnValue) => {
-      if (returnValue.response === 0) spawnSession.closeAll();
+      switch (returnValue.response) {
+        case 0:
+          spawnSession.closeAll();
+          break;
+        case 2:
+          event.preventDefault();
+          break;
+      }
     });
   }
 });
