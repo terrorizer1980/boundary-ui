@@ -30,11 +30,16 @@
   .rose-layout-global-body {
     max-height: 100vh;
     overflow: hidden;
+
+    main {
+      flex-grow: 1;
+      overflow: unset;
+    }
   }
 
   .rose-layout-sidebar-sidebar,
   .rose-layout-sidebar-body {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
@@ -212,13 +217,6 @@
 
 .nowrap {
   white-space: nowrap;
-}
-
-.rose-layout-global .rose-layout-global-body {
-  main {
-    flex-grow: 1;
-    overflow: auto;
-  }
 }
 
 .branded-card {
