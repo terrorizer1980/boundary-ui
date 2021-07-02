@@ -26,6 +26,7 @@
     "electron-is-dev": "^1.2.0",
     "electron-squirrel-startup": "^1.0.0",
     "lookpath": "^1.1.0",
+    "lzma-native": "8.0.1",
     "node-html-parser": "^3.3.5",
     "semver": "^7.3.5",
     "shell-quote": "^1.7.2",
