@@ -1190,7 +1190,7 @@ electron-rebuild@^2.0.3, electron-rebuild@^2.3.2:
     detect-libc "^1.0.3"
     fs-extra "^9.0.1"
     got "^11.7.0"
-    lzma-native "^6.0.1"
+    lzma-native "^8.0.1"
     node-abi "^2.19.2"
     node-gyp "^7.1.0"
     ora "^5.1.0"
@@ -2227,7 +2227,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lzma-native@8.0.1:
+lzma-native@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/lzma-native/-/lzma-native-8.0.1.tgz#8569e2f88de461a9a2469ac9d8183637c387d682"
   integrity sha512-Ryr9X3yDVZhRYOxR8QhUBCNe6GdEfy9BvFDIFtUvEkocvSvnrYt9lRm6FR1z0eQn0QSMenrgrDIJRMgUf9zsKQ==
@@ -2235,16 +2235,6 @@ lzma-native@8.0.1:
     node-addon-api "^3.1.0"
     node-gyp-build "^4.2.1"
     readable-stream "^3.6.0"
-
-lzma-native@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/lzma-native/-/lzma-native-6.0.1.tgz#eec231d31b9f9ba5aea5afc86326669f01dedb58"
-  integrity sha512-O6oWF0xe1AFvOCjU8uOZBZ/lhjaMNwHfVNaqVMqmoQXlRwBcFWpCAToiZOdXcKVMdo/5s/D0a2QgA5laMErxHQ==
-  dependencies:
-    node-addon-api "^1.6.0"
-    node-pre-gyp "^0.11.0"
-    readable-stream "^2.3.5"
-    rimraf "^2.7.1"
 
 macos-alias@~0.2.5:
   version "0.2.11"
