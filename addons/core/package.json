@@ -30,10 +30,10 @@
   "dependencies": {
     "api": "*",
     "auth": "*",
-    "ember-browser-services": "^1.1.6",
-    "ember-cli-babel": "^7.23.0",
+    "ember-browser-services": "^4.0.0",
+    "ember-cli-babel": "^8.0.0",
     "ember-cli-htmlbars": "^5.3.1",
-    "ember-feature-flags": "^6.0.0",
+    "ember-feature-flags": "^7.0.0",
     "ember-get-config": "^0.3.0",
     "ember-intl": "^5.5.0",
     "ember-loading": "^0.4.0",
